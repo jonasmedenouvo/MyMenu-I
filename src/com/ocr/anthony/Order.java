@@ -24,9 +24,6 @@ public class Order {
      */
     public void displaySelectedMenu(int nbMenu) {
 
-        //for (nbMenu=0; nbMenu <4; nbMenu++){
-
-
             if ((nbMenu < 1) || (nbMenu > 3)){
                 System.out.println("Vous n'avez pas choisi de menu parmi les choix proposés");
             }
@@ -39,6 +36,15 @@ public class Order {
             }
         }
 
-        //System.out.println("Vous avez choisi le menu " + nbMenu);
+    /**
+     * Run asking process for a menu.
+     */
+    public void runMenu() {
+
+        this.displayAvailableMenu();
+        Scanner sc = new Scanner(System.in);
+        int nb = sc.nextInt();
+        this.displaySelectedMenu(nb);
     }
-//}
+
+    }
